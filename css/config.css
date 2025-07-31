@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Unbounded:wght@200..900&display=swap');
+
+:root {
+  --primary-font: "Unbounded", sans-serif;
+  --second-font: "Ubuntu Sans", sans-serif;
+  --teal-color: #45C5AC;
+  --yellow-color: #F8FFAE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--second-font);
+    text-decoration: none;
+    list-style: none;
+}
