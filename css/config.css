@@ -1,17 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Unbounded:wght@200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Unbounded:wght@200..900&display=swap");
 
 :root {
   --primary-font: "Unbounded", sans-serif;
   --second-font: "Ubuntu Sans", sans-serif;
-  --teal-color: #45C5AC;
-  --yellow-color: #F8FFAE;
+  --teal-color: #45c5ac;
+  --teal-dark-color: #28b697;
+  --yellow-color: #f8ffae;
 }
 
 * {
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--yellow-color);
+  font-family: var(--second-font);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+/* Kontainer navbar */
+.nav-content {
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 15px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  font-family: var(--primary-font);
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* Toggle menu (hamburger) */
+.menu-toggle {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Link Navigasi */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  text-align: center;
+  list-style: none;
+}
+
+.nav-links li a:not(.btn) {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:not(.btn):hover {
+  color: var(--teal-color);
+}
+
+/* Button */
+.btn {
+  background-color: var(--teal-color);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  border: 2px solid #333;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: var(--teal-dark-color);
+  color: #fff;
+}
+
+/* Main */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 70px;
+    right: 5px;
+    background-color: #fff;
     padding: 0;
-    box-sizing: border-box;
-    font-family: var(--second-font);
-    text-decoration: none;
-    list-style: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    width: max-content;
+    display: flex;
+  }
+
+  .nav-links.show {
+    padding: 20px;
+    max-height: 500px;
+    border: 2px solid #333;
+  }
 }
