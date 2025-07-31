@@ -23,6 +23,22 @@ html {
 body {
   background-color: var(--yellow-color);
   font-family: var(--second-font);
+  animation: blinkBlur 1.2s ease-out;
+}
+
+@keyframes blinkBlur {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 
 /* Navbar */
