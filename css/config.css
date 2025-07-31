@@ -103,6 +103,16 @@ body {
   color: #fff;
 }
 
+.btn i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+  transform: rotate(25deg);
+}
+
+
 /* Main */
 .container {
   width: 90%;

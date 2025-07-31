@@ -1,5 +1,52 @@
 @import url("config.css");
 
+#beranda .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
 
+.beranda-kiri {
+  flex: 1 1 500px;
+}
 
+.beranda-kiri h1 {
+  font-family: var(--primary-font);
+  font-size: 4rem;
+  color: #333;
+  line-height: 1.4;
+}
 
+.beranda-kiri h1 span {
+  color: var(--teal-color);
+  text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333,
+    1px 1px 0 #333;
+}
+
+.beranda-kiri p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 15px 0 25px 0;
+  line-height: 1.6;
+}
+
+.beranda-kanan {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.beranda-kanan img {
+  width: 80%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .beranda-kiri {
+    text-align: center;
+  }
+  .beranda-kiri h1 {
+    font-size: 2.5rem;
+  }
+}
