@@ -6,6 +6,7 @@
   --teal-color: #45c5ac;
   --teal-dark-color: #28b697;
   --yellow-color: #f8ffae;
+  --yellow-dark-color: #ebf28a
 }
 
 * {
@@ -46,6 +47,9 @@ body {
   display: flex;
   justify-content: center;
   margin: 20px auto;
+  position: sticky;
+  top: 20px;
+  z-index: 999;
 }
 
 /* Kontainer navbar */
@@ -110,7 +114,7 @@ body {
   text-decoration: none;
   font-size: 16px;
   border: 2px solid #333;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.1s ease;
   display: inline-block;
 }
 
@@ -126,6 +130,10 @@ body {
 
 .btn:hover i {
   transform: rotate(25deg);
+}
+
+.btn:active {
+  transform: scale(0.95);
 }
 
 
