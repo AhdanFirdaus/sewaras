@@ -42,15 +42,7 @@
 
 #about {
   background-color: var(--yellow-dark-color);
-  padding-bottom: 24px;
-}
-
-#about h2 {
-  font-size: 3rem;
-  color: #333;
-  line-height: 1.4;
-  text-align: center;
-  padding: 24px 0;
+  padding: 60px 0;
 }
 
 #about .container {
@@ -156,6 +148,14 @@
 .text-content {
   width: 50%;
   padding: 20px;
+}
+
+.text-content h2 {
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  color: #333;
+  line-height: 1.4;
+  color: var(--teal-color);
 }
 
 .text-content li {
