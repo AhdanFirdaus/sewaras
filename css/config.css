@@ -6,7 +6,8 @@
   --teal-color: #45c5ac;
   --teal-dark-color: #28b697;
   --yellow-color: #f8ffae;
-  --yellow-dark-color: #ebf28a
+  --yellow-dark-color: #ebf28a;
+  --azureish-white: #dceaf5;
 }
 
 * {
@@ -25,6 +26,10 @@ body {
   background-color: var(--yellow-color);
   font-family: var(--second-font);
   animation: blinkBlur 1.2s ease-out;
+}
+
+p, li {
+  font-size: 18px;
 }
 
 @keyframes blinkBlur {
