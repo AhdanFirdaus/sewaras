@@ -28,6 +28,14 @@ body {
   animation: blinkBlur 1.2s ease-out;
 }
 
+h2 {
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  color: #333;
+  line-height: 1.4;
+  color: var(--teal-color);
+}
+
 p, li {
   font-size: 18px;
 }
@@ -57,7 +65,7 @@ p, li {
   z-index: 999;
 }
 
-/* Kontainer navbar */
+/* Container navbar */
 .nav-content {
   background-color: #fff;
   border: 2px solid #333;
@@ -112,6 +120,7 @@ p, li {
 
 /* Button */
 .btn {
+  display: inline-block;
   background-color: var(--teal-color);
   color: #fff;
   padding: 8px 16px;
@@ -120,7 +129,6 @@ p, li {
   font-size: 16px;
   border: 2px solid #333;
   transition: background-color 0.3s ease, transform 0.1s ease;
-  display: inline-block;
 }
 
 .btn:hover {
@@ -140,7 +148,6 @@ p, li {
 .btn:active {
   transform: scale(0.95);
 }
-
 
 /* Main */
 .container {
