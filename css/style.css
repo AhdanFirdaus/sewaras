@@ -15,7 +15,7 @@
 
 .left-porch h1 {
   font-family: var(--primary-font);
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: #333;
   line-height: 1.4;
 }
@@ -145,7 +145,7 @@
 
 .grid-text span {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .text-content {
@@ -175,7 +175,7 @@
   padding: 8px 16px;
   border-radius: 15px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 0.889rem;
   font-weight: bold;
   border: 2px solid #333;
 }
@@ -202,7 +202,7 @@
 }
 
 .card-icon {
-  font-size: 40px;
+  font-size: 2.2rem;
   margin-bottom: 10px;
   color: var(--yellow-color);
 }
@@ -212,6 +212,102 @@
   color: #fff;
 }
 
+/* Blood Availbility section */
+#blood-avail {
+  margin: 30px 0;
+}
+
+.carousel-container {
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card-blood {
+  display: flex;
+  align-items: center;
+  flex: 0 0 calc(33.333% - 20px);
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-blood img {
+  flex: 1 1 80px;
+  width: 100%;
+  height: 130px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card-content-blood {
+  flex: 1 1 150px;
+  min-width: 150px;
+}
+
+.card-content-blood h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.card-content-blood a {
+  margin: 5px 0;
+  font-size: 0.889rem;
+  color: #333;
+}
+
+.card-content-blood a:hover {
+  text-decoration: underline;
+}
+
+.card-content-blood i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.card-content-blood:hover i {
+  transform: rotate(-45deg);
+}
+
+.carousel-controls {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--teal-color);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #333;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.carousel-btn:hover {
+  background-color: var(--teal-dark-color);
+}
+
+.carousel-btn:active {
+  transform: scale(0.95);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .left-porch {
@@ -219,7 +315,7 @@
   }
 
   .left-porch h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .grid-container,
