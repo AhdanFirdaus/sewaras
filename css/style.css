@@ -1,7 +1,7 @@
 @import url("config.css");
 
 /* Home section */
-#home-section .container {
+#home .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,13 +42,13 @@
 }
 
 /* About section */
-#about-section {
+#about {
   background-color: var(--yellow-dark-color);
   padding: 60px 0;
   margin-top: 60px;
 }
 
-#about-section .container {
+#about .container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -163,7 +163,7 @@
 }
 
 /* Consultation section */
-#consultation-section {
+#consultation {
   padding: 30px 0;
   margin: 30px 0;
 }
