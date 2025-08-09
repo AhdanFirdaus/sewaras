@@ -20,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 body {
@@ -30,14 +31,15 @@ body {
 
 h2 {
   font-family: var(--primary-font);
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #333;
   line-height: 1.4;
   color: var(--teal-color);
 }
 
-p, li {
-  font-size: 18px;
+p,
+li {
+  font-size: 1rem;
 }
 
 @keyframes blinkBlur {
@@ -83,14 +85,14 @@ p, li {
 .logo {
   font-family: var(--primary-font);
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 2px;
 }
 
 /* Toggle menu (hamburger) */
 .menu-toggle {
   display: none;
-  font-size: 20px;
+  font-size: 1rem;
   cursor: pointer;
   color: #333;
 }
@@ -110,7 +112,7 @@ p, li {
 .nav-links li a:not(.btn) {
   text-decoration: none;
   color: #000;
-  font-size: 16px;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
@@ -126,7 +128,7 @@ p, li {
   padding: 8px 16px;
   border-radius: 15px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   border: 2px solid #333;
   transition: background-color 0.3s ease, transform 0.1s ease;
 }
@@ -157,9 +159,13 @@ p, li {
 
 /* Responsive */
 @media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
   .menu-toggle {
     display: block;
-    font-size: 24px;
+    font-size: 1.4rem;
   }
 
   .nav-links {
