@@ -1,77 +1,87 @@
 $(function () {
-  const $toggle = $('#menu-toggle');
-  const $navLinks = $('#nav-links');
-  const $menuIcon = $('#menu-icon');
-  const $track = $('.carousel-track');
-  const $prevBtn = $('.prev');
-  const $nextBtn = $('.next');
-  const $cards = $('.card-blood');
+  const $toggle     = $('#menu-toggle');
+  const $navLinks   = $('#nav-links');
+  const $menuIcon   = $('#menu-icon');
+  const $track      = $('.carousel-track');
+  const $prevBtn    = $('.prev');
+  const $nextBtn    = $('.next');
+  const $cards      = $('.card-blood');
+  const $faqItems   = $('.faq-item');
 
-  let index = 0;
-  let startX = 0;
-  let isDragging = false;
-  let currentTranslate = 0;
-  let prevTranslate = 0;
+  let index = 0, startX = 0, isDragging = false;
+  let currentTranslate = 0, prevTranslate = 0;
 
-  function updateCarousel() {
-    const cardWidth = $cards.eq(0).outerWidth(true);
-    currentTranslate = -index * cardWidth;
+  const cardWidth = () => $cards.eq(0).outerWidth(true);
+
+  const updateCarousel = () => {
+    currentTranslate = -index * cardWidth();
     prevTranslate = currentTranslate;
-    $track.css('transform', `translateX(${currentTranslate}px)`);
-  }
+    $track.css({
+      transform: `translateX(${currentTranslate}px)`,
+      transition: 'transform 0.3s ease'
+    });
+  };
 
-  function getX(e) {
-    return e.type.includes('mouse') ? e.pageX : e.originalEvent.touches[0].clientX;
-  }
+  const getX = e =>
+    e.type.includes('mouse') ? e.pageX : e.originalEvent.touches[0].clientX;
 
-  function startDrag(e) {
+  const startDrag = e => {
     isDragging = true;
     startX = getX(e);
     $track.css('transition', 'none');
-  }
+  };
 
-  function drag(e) {
+  const drag = e => {
     if (!isDragging) return;
     const x = getX(e);
     $track.css('transform', `translateX(${prevTranslate + (x - startX)}px)`);
-  }
+  };
 
-  function endDrag(e) {
+  const endDrag = e => {
     if (!isDragging) return;
     isDragging = false;
-    const x = getX(e);
-    const moved = x - startX;
-    const threshold = $cards.eq(0).outerWidth() / 4;
+    const moved = getX(e) - startX;
+    const threshold = cardWidth() / 4;
+
     if (moved < -threshold && index < $cards.length - 1) index++;
     if (moved > threshold && index > 0) index--;
-    $track.css('transition', 'transform 0.3s ease');
-    updateCarousel();
-  }
 
-  // Toggle Menu
-  $toggle.on('click', function () {
+    updateCarousel();
+  };
+
+  $toggle.on('click', () => {
     $navLinks.toggleClass('show');
     $menuIcon.toggleClass('bi-list bi-x');
   });
 
-  // Button Next & Prev
-  $prevBtn.on('click', function () {
+  $prevBtn.on('click', () => {
     if (index > 0) index--;
     updateCarousel();
   });
-  $nextBtn.on('click', function () {
+  $nextBtn.on('click', () => {
     if (index < $cards.length - 1) index++;
     updateCarousel();
   });
 
-  // Drag / Swipe Events
-  $track.on('mousedown touchstart', startDrag);
-  $track.on('mousemove touchmove', drag);
-  $track.on('mouseup mouseleave touchend', endDrag);
+  $track.on('mousedown touchstart', startDrag)
+        .on('mousemove touchmove', drag)
+        .on('mouseup mouseleave touchend', endDrag);
 
-  // Resize Event
   $(window).on('resize', updateCarousel);
 
-  // Inisialisasi
+  $('.faq-question').on('click', function () {
+    const $parent = $(this).parent('.faq-item');
+    const $icon   = $(this).find('i');
+
+    $faqItems.not($parent).removeClass('active')
+      .find('.faq-answer').slideUp()
+      .end().find('i').removeClass('bi-dash').addClass('bi-plus');
+
+    $parent.toggleClass('active')
+      .find('.faq-answer').stop(true, true).slideToggle();
+
+    $icon.toggleClass('bi-plus bi-dash');
+  });
+
   updateCarousel();
 });
