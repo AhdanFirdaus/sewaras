@@ -6,7 +6,7 @@
   --teal-color: #45c5ac;
   --teal-dark-color: #28b697;
   --yellow-color: #f8ffae;
-  --yellow-dark-color: #f6ff75;
+  --yellow-dark-color: #ebf74a;
   --azureish-white: #dceaf5;
 }
 
@@ -29,7 +29,7 @@ body {
     linear-gradient(var(--yellow-color), var(--yellow-color));
   background-repeat: repeat;
   background-size: auto;
-  background-blend-mode: soft-light;
+  background-blend-mode: multiply;
   font-family: var(--second-font);
   animation: blinkBlur 1.2s ease-out;
 }

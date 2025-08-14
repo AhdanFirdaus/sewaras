@@ -43,9 +43,8 @@
 
 /* About section */
 #about {
+  margin-top: -10px;
   background-color: var(--yellow-dark-color);
-  padding: 60px 0;
-  margin-top: 60px;
 }
 
 #about .container {
@@ -163,11 +162,6 @@
 }
 
 /* Consultation section */
-#consultation {
-  padding: 60px 0;
-  margin: 60px 0;
-}
-
 .tag {
   display: inline-block;
   background-color: var(--teal-color);
