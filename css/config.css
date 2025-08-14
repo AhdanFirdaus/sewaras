@@ -6,7 +6,7 @@
   --teal-color: #45c5ac;
   --teal-dark-color: #28b697;
   --yellow-color: #f8ffae;
-  --yellow-dark-color: #ebf28a;
+  --yellow-dark-color: #f6ff75;
   --azureish-white: #dceaf5;
 }
 
@@ -25,6 +25,11 @@ html {
 
 body {
   background-color: var(--yellow-color);
+  background-image: url("/assets/img/pattern.png"),
+    linear-gradient(var(--yellow-color), var(--yellow-color));
+  background-repeat: repeat;
+  background-size: auto;
+  background-blend-mode: soft-light;
   font-family: var(--second-font);
   animation: blinkBlur 1.2s ease-out;
 }
@@ -67,7 +72,6 @@ li {
   z-index: 999;
 }
 
-/* Container navbar */
 .nav-content {
   background-color: #fff;
   border: 2px solid #333;
@@ -177,6 +181,98 @@ li {
   margin: 0 auto;
 }
 
+/* Footer */
+footer {
+  background-color: var(--yellow-dark-color);
+  color: #333;
+  margin-top: 180px;
+}
+
+.cta-container {
+  width: 90%;
+  background: linear-gradient(
+    to bottom right,
+    var(--teal-color),
+    var(--teal-dark-color)
+  );
+  color: #fff;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-40px);
+}
+
+.cta-title {
+  color: #fff;
+}
+
+.cta-text {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.cta-buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cta-buttons .btn {
+  display: block;
+  background-color: #fff;
+  color: var(--teal-dark-color);
+  border: none;
+}
+
+.footer-nav {
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--yellow-color);
+  text-align: center;
+}
+
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  gap: 1.5rem;
+}
+
+.brand-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--teal-color);
+}
+
+.brand-desc {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.brand-copy {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.75rem;
+  justify-content: start;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   html {
@@ -211,5 +307,17 @@ li {
     padding: 20px;
     max-height: 500px;
     border: 2px solid #333;
+  }
+
+  .footer-flex {
+    flex-direction: column;
+  }
+
+  .footer-copyright {
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
   }
 }
