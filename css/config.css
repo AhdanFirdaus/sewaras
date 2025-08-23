@@ -128,6 +128,7 @@ li {
 .btn {
   display: inline-block;
   background-color: var(--teal-color);
+  cursor: pointer;
   color: #fff;
   padding: 8px 16px;
   border-radius: 15px;
