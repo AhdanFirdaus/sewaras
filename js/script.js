@@ -1,12 +1,9 @@
 $(function () {
-  const $toggle     = $('#menu-toggle');
-  const $navLinks   = $('#nav-links');
-  const $menuIcon   = $('#menu-icon');
-  const $track      = $('.carousel-track');
-  const $prevBtn    = $('.prev');
-  const $nextBtn    = $('.next');
-  const $cards      = $('.card-blood');
-  const $faqItems   = $('.faq-item');
+  const $track    = $('.carousel-track');
+  const $prevBtn  = $('.prev');
+  const $nextBtn  = $('.next');
+  const $cards    = $('.card-blood');
+  const $faqItems = $('.faq-item');
 
   let index = 0, startX = 0, isDragging = false;
   let currentTranslate = 0, prevTranslate = 0;
@@ -49,15 +46,11 @@ $(function () {
     updateCarousel();
   };
 
-  $toggle.on('click', () => {
-    $navLinks.toggleClass('show');
-    $menuIcon.toggleClass('bi-list bi-x');
-  });
-
   $prevBtn.on('click', () => {
     if (index > 0) index--;
     updateCarousel();
   });
+
   $nextBtn.on('click', () => {
     if (index < $cards.length - 1) index++;
     updateCarousel();
