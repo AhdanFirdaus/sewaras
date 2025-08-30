@@ -2,8 +2,8 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>Konsultasi Kesehatan - SEWARAS</title>
-    <link rel="stylesheet" href="css/consultation.css" />
+    <title>Ketersediaan Darah - SEWARAS</title>
+    <link rel="stylesheet" href="css/availability.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
@@ -14,44 +14,38 @@
     <!-- SEO -->
     <meta
       name="description"
-      content="Layanan konsultasi kesehatan online SEWARAS untuk warga Semarang. Dapatkan saran medis terpercaya dari tenaga profesional kapan saja."
+      content="Cek ketersediaan darah di Semarang melalui SEWARAS. Temukan informasi stok darah dan layanan donor darah untuk membantu sesama."
     />
     <meta
       name="keywords"
-      content="Konsultasi Kesehatan, Konsultasi Online, Dokter Semarang, Layanan Medis, SEWARAS"
+      content="Ketersediaan Darah, Stok Darah, Donor Darah, PMI Semarang, SEWARAS"
     />
     <meta name="author" content="Ahdan, Rakha, Nadine" />
     <meta name="x-robots-tag" content="index, follow" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Konsultasi Kesehatan Online - SEWARAS" />
+    <meta property="og:title" content="Ketersediaan Darah - SEWARAS" />
     <meta
       property="og:description"
-      content="Konsultasi kesehatan online terpercaya untuk Semarang. Dapatkan informasi medis dan saran dari SEWARAS."
+      content="Pantau stok darah di Semarang secara real-time bersama SEWARAS. Mudah untuk mengetahui kebutuhan donor darah terkini."
     />
     <meta
       property="og:image"
-      content="https://sewaras.vercel.app/assets/img/consultation-thumb.jpg"
+      content="https://sewaras.vercel.app/assets/img/blood-thumb.jpg"
     />
-    <meta
-      property="og:url"
-      content="https://sewaras.vercel.app/consultation.html"
-    />
+    <meta property="og:url" content="https://sewaras.vercel.app/blood.html" />
     <meta property="og:type" content="article" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Konsultasi Kesehatan Online - SEWARAS"
-    />
+    <meta name="twitter:title" content="Ketersediaan Darah - SEWARAS" />
     <meta
       name="twitter:description"
-      content="Konsultasi kesehatan online terpercaya untuk Semarang. Dapatkan informasi medis dan saran dari SEWARAS."
+      content="Pantau stok darah di Semarang secara real-time bersama SEWARAS. Mudah untuk mengetahui kebutuhan donor darah terkini."
     />
     <meta
       name="twitter:image"
-      content="https://sewaras.vercel.app/assets/img/consultation-thumb.jpg"
+      content="https://sewaras.vercel.app/assets/img/blood-thumb.jpg"
     />
   </head>
   <body>
@@ -75,26 +69,22 @@
     </nav>
 
     <main>
-      <section id="consultation">
-        <aside class="sidebar">
-          <h2>Layanan Konsultasi</h2>
-          <button class="btn disease-btn" data-disease="Umum">Umum</button>
-          <button class="btn disease-btn" data-disease="Mental">Mental</button>
-          <button class="btn disease-btn" data-disease="Pemeriksaan">
-            Pemeriksaan
-          </button>
-        </aside>
+      <section id="availability">
+        <div class="container">
+          <div id="slides-container"></div>
 
-        <div class="chat-area">
-          <div class="chat-display" id="chat-display">
-            <p class="placeholder">
-              Pilih opsi keluhan untuk memulai konsultasi...
-            </p>
+          <div class="last-update" id="lastUpdate"></div>
+          <div class="note">
+            Data stok darah ini bersifat informatif dan dapat berubah
+            sewaktu-waktu
           </div>
-          <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Ketik pesan..." />
-            <button id="send-btn" class="btn">
-              <i class="bi bi-send"></i>
+
+          <div class="nav-controls">
+            <button class="carousel-btn" onclick="prevSlide()">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="carousel-btn" onclick="nextSlide()">
+              <i class="bi bi-chevron-right"></i>
             </button>
           </div>
         </div>
@@ -136,6 +126,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/navbar.js"></script>
-    <script src="js/consultation.js"></script>
+    <script src="js/availability.js"></script>
   </body>
 </html>

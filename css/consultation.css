@@ -4,7 +4,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  margin-top: 70px;
 }
 
 #consultation {
@@ -90,20 +90,18 @@ main {
   outline: none;
 }
 
-footer {
-  margin-top: 60px;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   #consultation {
     flex-direction: column;
   }
+
   .sidebar {
     width: 100%;
     flex-direction: row;
     overflow-x: auto;
   }
+
   .sidebar h2 {
     display: none;
   }

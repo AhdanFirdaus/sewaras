@@ -1,0 +1,66 @@
+[
+  {
+    "nama": "Rumah Sakit Umum Pusat Dr. Kariadi",
+    "gambar": "https://images.unsplash.com/photo-1541696432-82c6da8ce7bf",
+    "kontak": "#",
+    "update": "10 Agustus 2025 14:33",
+    "stok": {
+      "A+": 10,
+      "A-": 17,
+      "B+": 11,
+      "B-": 5,
+      "AB+": 10,
+      "AB-": 3,
+      "O+": 23,
+      "O-": 20
+    }
+  },
+  {
+    "nama": "RSUD Tugurejo",
+    "gambar": "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d",
+    "kontak": "#",
+    "update": "10 Agustus 2025 14:35",
+    "stok": {
+      "A+": 15,
+      "A-": 7,
+      "B+": 20,
+      "B-": 6,
+      "AB+": 5,
+      "AB-": 1,
+      "O+": 18,
+      "O-": 9
+    }
+  },
+  {
+    "nama": "RS Telogorejo",
+    "gambar": "https://www.rstelogorejo.co.id/assets/img/gedung.jpg",
+    "kontak": "#",
+    "update": "10 Agustus 2025 14:37",
+    "stok": {
+      "A+": 12,
+      "A-": 4,
+      "B+": 9,
+      "B-": 2,
+      "AB+": 8,
+      "AB-": 0,
+      "O+": 25,
+      "O-": 13
+    }
+  },
+  {
+    "nama": "RS Hermina Pandanaran",
+    "gambar": "https://herminahospitals.com/img/hospital/RS_Hermina_Pandanaran.jpg",
+    "kontak": "#",
+    "update": "10 Agustus 2025 14:40",
+    "stok": {
+      "A+": 9,
+      "A-": 5,
+      "B+": 16,
+      "B-": 4,
+      "AB+": 7,
+      "AB-": 2,
+      "O+": 21,
+      "O-": 14
+    }
+  }
+]

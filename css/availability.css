@@ -1,0 +1,131 @@
+@import url("config.css");
+
+#availability {
+  margin-top: 70px;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  animation: fade 0.5s;
+}
+
+.active {
+  display: block;
+}
+
+.hospital {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.btn-contact {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-contact:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+.stocks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.stock-card {
+  background: var(--teal-color);
+  color: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.stock-card small {
+  display: block;
+  margin-top: 5px;
+}
+
+.nav-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.carousel-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--teal-color);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #333;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.carousel-btn:hover {
+  background-color: var(--teal-dark-color);
+}
+
+.carousel-btn:active {
+  transform: scale(0.95);
+}
+
+.last-update {
+  margin-top: 15px;
+}
+
+.note {
+  margin-top: 8px;
+  font-style: italic;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hospital {
+    grid-template-columns: 1fr;
+  }
+
+  .stocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
