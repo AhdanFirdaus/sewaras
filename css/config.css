@@ -24,6 +24,9 @@ html {
 }
 
 body {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 500px;
   background-color: var(--yellow-color);
   background-image: url("/assets/img/pattern.png"),
     linear-gradient(var(--yellow-color), var(--yellow-color));
@@ -184,9 +187,12 @@ li {
 
 /* Footer */
 footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: var(--yellow-dark-color);
   color: #333;
-  margin-top: 180px;
 }
 
 .cta-container {
@@ -278,6 +284,10 @@ footer {
 @media (max-width: 768px) {
   html {
     font-size: 16px;
+  }
+
+  body {
+    padding-bottom: 700px;
   }
 
   .menu-toggle {

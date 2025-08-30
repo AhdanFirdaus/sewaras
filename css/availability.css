@@ -1,7 +1,7 @@
 @import url("config.css");
 
 #availability {
-  margin: 60px 0;
+  margin-top: 50px;
 }
 
 .container {
@@ -26,7 +26,6 @@
   margin-top: 20px;
 }
 
-/* Gambar dengan overlay */
 .image-container {
   position: relative;
   width: 100%;
@@ -79,17 +78,27 @@
   margin-top: 20px;
 }
 
-.nav-btn {
-  background: #00bfa6;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
+.carousel-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--teal-color);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #333;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.carousel-btn:hover {
+  background-color: var(--teal-dark-color);
+}
+
+.carousel-btn:active {
+  transform: scale(0.95);
 }
 
 .last-update {
@@ -101,10 +110,6 @@
   font-style: italic;
 }
 
-footer {
-  margin-top: 100px;
-}
-
 @keyframes fade {
   from {
     opacity: 0.4;
@@ -114,10 +119,12 @@ footer {
   }
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .hospital {
     grid-template-columns: 1fr;
   }
+
   .stocks {
     grid-template-columns: repeat(2, 1fr);
   }
