@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kesehatan Wilayah - SEWARAS</title>
+    <link rel="stylesheet" href="css/healthregion.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="icon" href="assets/img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Cek ketersediaan darah di Semarang melalui SEWARAS. Temukan informasi stok darah dan layanan donor darah untuk membantu sesama."
+    />
+    <meta
+      name="keywords"
+      content="Ketersediaan Darah, Stok Darah, Donor Darah, PMI Semarang, SEWARAS"
+    />
+    <meta name="author" content="Ahdan, Rakha, Nadine" />
+    <meta name="x-robots-tag" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ketersediaan Darah - SEWARAS" />
+    <meta
+      property="og:description"
+      content="Pantau stok darah di Semarang secara real-time bersama SEWARAS. Mudah untuk mengetahui kebutuhan donor darah terkini."
+    />
+    <meta
+      property="og:image"
+      content="https://sewaras.vercel.app/assets/img/blood-thumb.jpg"
+    />
+    <meta property="og:url" content="https://sewaras.vercel.app/blood.html" />
+    <meta property="og:type" content="article" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ketersediaan Darah - SEWARAS" />
+    <meta
+      name="twitter:description"
+      content="Pantau stok darah di Semarang secara real-time bersama SEWARAS. Mudah untuk mengetahui kebutuhan donor darah terkini."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sewaras.vercel.app/assets/img/blood-thumb.jpg"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-content">
+        <a href="index.html" class="logo">SEWARAS</a>
+
+        <div class="menu-toggle" id="menu-toggle">
+          <i class="bi bi-list" id="menu-icon"></i>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="consultation.html" class="active">Konsultasi</a></li>
+          <li><a href="availability.html">Ketersediaan Darah</a></li>
+          <li><a href="healthregion.html">Kesehatan Wilayah</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="login.html" class="btn">Masuk</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section id="healthregion">
+        <div id="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63362.13157363757!2d110.4026299!3d-6.9935864!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4d3f0d024d%3A0x1e0432b9da5cb9f2!2sKota%20Semarang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1757251269785!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+          <div
+            class="marker high"
+            style="top: 35%; left: 55%"
+            data-nama="Semarang Timur"
+            data-type="Kelembaban"
+            data-status="high"
+            data-img="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?fit=crop&w=400&h=400"
+            ></div>
+            <div
+            class="marker medium"
+            style="top: 15%; left: 55%"
+            data-nama="Semarang Utara"
+            data-type="Tingkat Polusi"
+            data-status="medium"
+            data-img="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?fit=crop&w=400&h=400"
+            ></div>
+            <div
+            class="marker low"
+            style="top: 15%; left: 50%"
+            data-nama="Semarang Barat"
+            data-type="Kelembaban"
+            data-status="low"
+            data-img="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?fit=crop&w=400&h=400"
+            ></div>
+
+          <div class="legend">
+            <p><span class="dot low"></span> Rendah</p>
+            <p><span class="dot medium"></span> Sedang</p>
+            <p><span class="dot high"></span> Tinggi</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="btn btn-filter active" onclick="showAll()">
+            Tampilkan Semua
+          </button>
+          <button class="btn btn-filter" onclick="filterData('Kelembaban')">Kelembaban</button>
+          <button class="btn btn-filter" onclick="filterData('Tingkat Polusi')">
+            Tingkat Polusi
+          </button>
+        </div>
+
+        <div id="info-cards" class="cards-container"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="cta-container">
+        <h2 class="cta-title">Butuh Konsultasi? Kami Siap Membantu</h2>
+        <p class="cta-text">
+          Jangan tunda masalah kesehatan. Konsultasikan keluhanmu dengan tenaga
+          medis berpengalaman dari SEWARAS.
+        </p>
+        <div class="cta-buttons">
+          <a href="login.html" class="btn"> Konsultasi Sekarang </a>
+          <a href="contact.html" class="btn-outline">
+            Hubungi Kami <i class="bi bi-arrow-right-short"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-nav container">
+        <div class="footer-flex">
+          <div class="footer-copyright">
+            <h2 class="brand-title">SEWARAS</h2>
+            <p class="brand-desc">Untuk Semarang yang Lebih Sehat.</p>
+            <p class="brand-copy">©2025 Sewaras. All Rights Reserved.</p>
+          </div>
+
+          <div class="footer-links">
+            <a href="consultation.html">Konsultasi</a>
+            <a href="availability.html">Ketersediaan Darah</a>
+            <a href="health-region.html">Kesehatan Wilayah</a>
+            <a href="quiz.html">Quiz</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/healthregion.js"></script>
+  </body>
+</html>

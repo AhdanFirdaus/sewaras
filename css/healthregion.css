@@ -1,0 +1,124 @@
+@import url("config.css");
+
+main {
+  margin-top: 100px;
+}
+
+#map-container {
+  position: relative;
+  margin: 20px auto;
+  width: 90%;
+}
+#map-container iframe {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.marker {
+  position: absolute;
+  width: 18px; 
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #333;
+  transform: translate(-50%, -50%);
+}
+.marker.low { background: green; }
+.marker.medium { background: orange; }
+.marker.high { background: red; }
+
+.legend {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.legend p {
+  font-size: 0.889rem;
+}
+
+.legend .dot {
+  display: inline-block;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.low { background: green; }
+.medium { background: orange; }
+.high { background: red; }
+
+.controls {
+  text-align: center;
+  margin: 20px;
+}
+
+.btn-filter {
+  width: 200px;
+  margin: 5px;
+}
+
+.btn-filter.active { background: var(--teal-dark-color);}
+
+#info-cards {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.card-health {
+  display: flex;
+  align-items: center;
+  flex: 1 1 calc(33.333% - 15px);
+  max-width: calc(33.333% - 15px);
+  min-width: 250px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-health img {
+  flex: 0 0 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-content-health {
+  flex: 1;
+  min-width: 0;
+  padding-left: 10px;
+  word-wrap: break-word;
+}
+
+
+.card-content-health h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.card-content-health span {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.card-content-health .shape {
+  padding: 6px;
+  margin-left: 10px;
+  border-radius: 100%;
+}
