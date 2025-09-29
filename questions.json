@@ -1,0 +1,27 @@
+[
+  {
+    "q": "Minuman terbaik untuk tubuh adalah",
+    "opts": ["Air putih", "Soda", "Kopi sachet", "Sirup"],
+    "ans": "Air putih"
+  },
+  {
+    "q": "Berapa jam tidur ideal untuk remaja?",
+    "opts": ["3-4 jam", "5-6 jam", "7-9 jam", "10-12 jam"],
+    "ans": "7-9 jam"
+  },
+  {
+    "q": "Olahraga minimal yang disarankan dalam seminggu?",
+    "opts": ["30 menit", "150 menit", "5 jam", "10 jam"],
+    "ans": "150 menit"
+  },
+  {
+    "q": "Makanan yang lebih sehat adalah?",
+    "opts": ["Fast food", "Sayur dan buah", "Makanan instan", "Gorengan"],
+    "ans": "Sayur dan buah"
+  },
+  {
+    "q": "Berapa gelas air yang disarankan per hari?",
+    "opts": ["2-3 gelas", "5-6 gelas", "8 gelas", "12 gelas"],
+    "ans": "8 gelas"
+  }
+]

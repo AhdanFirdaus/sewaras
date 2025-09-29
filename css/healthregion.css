@@ -17,16 +17,22 @@ main {
 
 .marker {
   position: absolute;
-  width: 18px; 
+  width: 18px;
   height: 18px;
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid #333;
   transform: translate(-50%, -50%);
 }
-.marker.low { background: green; }
-.marker.medium { background: orange; }
-.marker.high { background: red; }
+.marker.low {
+  background: green;
+}
+.marker.medium {
+  background: orange;
+}
+.marker.high {
+  background: red;
+}
 
 .legend {
   position: absolute;
@@ -44,13 +50,20 @@ main {
 
 .legend .dot {
   display: inline-block;
-  width: 12px; height: 12px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   margin-right: 6px;
 }
-.low { background: green; }
-.medium { background: orange; }
-.high { background: red; }
+.low {
+  background: green;
+}
+.medium {
+  background: orange;
+}
+.high {
+  background: red;
+}
 
 .controls {
   text-align: center;
@@ -62,7 +75,9 @@ main {
   margin: 5px;
 }
 
-.btn-filter.active { background: var(--teal-dark-color);}
+.btn-filter.active {
+  background: var(--teal-dark-color);
+}
 
 #info-cards {
   width: 90%;
@@ -101,7 +116,6 @@ main {
   padding-left: 10px;
   word-wrap: break-word;
 }
-
 
 .card-content-health h3 {
   margin: 0;
