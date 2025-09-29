@@ -2,7 +2,7 @@ let currentSlide = 0;
 let slidesData = [];
 
 function loadSlides() {
-  $.getJSON("../data.json")
+  $.getJSON("/assets/data/bloodAvailability.json")
     .done(function (data) {
       slidesData = data;
       renderSlides();

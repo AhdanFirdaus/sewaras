@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Kesehatan Wilayah - SEWARAS</title>
-    <link rel="stylesheet" href="css/healthregion.css" />
+    <link rel="stylesheet" href="../assets/css/healthregion.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
@@ -52,7 +52,7 @@
     <!-- Navbar -->
     <nav class="navbar">
       <div class="nav-content">
-        <a href="index.html" class="logo">SEWARAS</a>
+        <a href="../index.html" class="logo">SEWARAS</a>
 
         <div class="menu-toggle" id="menu-toggle">
           <i class="bi bi-list" id="menu-icon"></i>
@@ -63,7 +63,7 @@
           <li><a href="availability.html">Ketersediaan Darah</a></li>
           <li><a href="healthregion.html">Kesehatan Wilayah</a></li>
           <li><a href="quiz.html">Quiz</a></li>
-          <li><a href="login.html" class="btn">Masuk</a></li>
+          <li><a href="#" class="btn">Masuk</a></li>
         </ul>
       </div>
     </nav>
@@ -88,23 +88,23 @@
             data-type="Kelembaban"
             data-status="high"
             data-img="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?fit=crop&w=400&h=400"
-            ></div>
-            <div
+          ></div>
+          <div
             class="marker medium"
             style="top: 15%; left: 55%"
             data-nama="Semarang Utara"
             data-type="Tingkat Polusi"
             data-status="medium"
             data-img="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?fit=crop&w=400&h=400"
-            ></div>
-            <div
+          ></div>
+          <div
             class="marker low"
             style="top: 15%; left: 50%"
             data-nama="Semarang Barat"
             data-type="Kelembaban"
             data-status="low"
             data-img="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?fit=crop&w=400&h=400"
-            ></div>
+          ></div>
 
           <div class="legend">
             <p><span class="dot low"></span> Rendah</p>
@@ -117,7 +117,9 @@
           <button class="btn btn-filter active" onclick="showAll()">
             Tampilkan Semua
           </button>
-          <button class="btn btn-filter" onclick="filterData('Kelembaban')">Kelembaban</button>
+          <button class="btn btn-filter" onclick="filterData('Kelembaban')">
+            Kelembaban
+          </button>
           <button class="btn btn-filter" onclick="filterData('Tingkat Polusi')">
             Tingkat Polusi
           </button>
@@ -135,7 +137,7 @@
           medis berpengalaman dari SEWARAS.
         </p>
         <div class="cta-buttons">
-          <a href="login.html" class="btn"> Konsultasi Sekarang </a>
+          <a href="#" class="btn"> Konsultasi Sekarang </a>
           <a href="contact.html" class="btn-outline">
             Hubungi Kami <i class="bi bi-arrow-right-short"></i>
           </a>
@@ -161,7 +163,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/healthregion.js"></script>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/healthregion.js"></script>
   </body>
 </html>

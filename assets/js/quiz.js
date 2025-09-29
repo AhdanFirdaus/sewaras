@@ -134,7 +134,7 @@ $cancel.on("click", () => {
   updateTimer();
 });
 
-fetch("questions.json")
+fetch("/assets/data/questions.json")
   .then(res => res.json())
   .then(data => {
     questions = data;

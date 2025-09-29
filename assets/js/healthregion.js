@@ -10,7 +10,7 @@ $(document).ready(function () {
       const nama = $m.data("nama");
       const type = $m.data("type");
       const status = $m.data("status");
-      const img = $m.data("img") || "https://via.placeholder.com/400x400";
+      const img = $m.data("img") || "https://placehold.co/400x400";
 
       if (filter === "all" || type === filter) {
         const $card = $(`
@@ -50,6 +50,5 @@ $(document).ready(function () {
     );
   });
 
-  // Load awal
   renderCards();
 });
