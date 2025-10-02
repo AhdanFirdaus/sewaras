@@ -1,7 +1,7 @@
 [
   {
-    "nama": "Rumah Sakit Umum Pusat Dr. Kariadi",
-    "gambar": "https://images.unsplash.com/photo-1541696432-82c6da8ce7bf",
+    "nama": "Rumah Sakit Umum Dr. Kariadi",
+    "gambar": "../assets/img/kariadi.jpg",
     "kontak": "#",
     "update": "10 Agustus 2025 14:33",
     "stok": {
@@ -16,8 +16,8 @@
     }
   },
   {
-    "nama": "RSUD Tugurejo",
-    "gambar": "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d",
+    "nama": "Rumah Sakit Elizabeth",
+    "gambar": "../assets/img/elizabeth.jpg",
     "kontak": "#",
     "update": "10 Agustus 2025 14:35",
     "stok": {
@@ -32,8 +32,8 @@
     }
   },
   {
-    "nama": "RS Telogorejo",
-    "gambar": "https://www.rstelogorejo.co.id/assets/img/gedung.jpg",
+    "nama": "Rumah Sakit Telogorejo",
+    "gambar": "../assets/img/telogorejo.jpg",
     "kontak": "#",
     "update": "10 Agustus 2025 14:37",
     "stok": {
@@ -48,8 +48,8 @@
     }
   },
   {
-    "nama": "RS Hermina Pandanaran",
-    "gambar": "https://herminahospitals.com/img/hospital/RS_Hermina_Pandanaran.jpg",
+    "nama": "Rumah Sakit Hermina",
+    "gambar": "../assets/img/hermina.jpg",
     "kontak": "#",
     "update": "10 Agustus 2025 14:40",
     "stok": {

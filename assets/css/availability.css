@@ -90,15 +90,21 @@
   cursor: pointer;
   border-radius: 50%;
   border: 2px solid #333;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  transition: background-color 0.3s ease, transform 0.1s ease, opacity 0.3s ease;
 }
 
-.carousel-btn:hover {
+.carousel-btn:hover:not(:disabled) {
   background-color: var(--teal-dark-color);
 }
 
-.carousel-btn:active {
+.carousel-btn:active:not(:disabled) {
   transform: scale(0.95);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none; /* Prevent any interaction */
 }
 
 .last-update {
