@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Sewaras</title>
+    <link rel="stylesheet" href="../assets/css/login.css" />
+    <link rel="icon" href="../assets/img/icon.png" />
+  </head>
+
+  <body>
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            <form action="index.html" autocomplete="off" class="sign-in-form">
+              <div class="heading">
+                <h2>Selamat Kembali</h2>
+                <h6>Belum mendaftar?</h6>
+                <a href="#" class="toggle">Daftar</a>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Nama</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Password</label>
+                </div>
+
+                <input type="submit" value="Masuk" class="btn" />
+
+                <p class="text">
+                  Lupa kata sandi atau nama pengguna Anda?
+                  <a href="#">Dapatkan bantuan</a>
+                </p>
+              </div>
+            </form>
+
+            <form action="index.html" autocomplete="off" class="sign-up-form">
+              <div class="heading">
+                <h2>Mulai Sekarang</h2>
+                <h6>Sudah memiliki akun?</h6>
+                <a href="#" class="toggle">Masuk</a>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Nama</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="email"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Email</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label>Password</label>
+                </div>
+
+                <input type="submit" value="Sign Up" class="btn" />
+
+                <p class="text">
+                  Dengan mendaftar, saya menyetujui
+                  <a href="#">Syarat Layanan</a> dan
+                  <a href="#">Kebijakan Privasi</a>
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img
+                src="../assets/img/about_1.jpg"
+                class="image img-1 show"
+                alt=""
+              />
+              <img src="../assets/img/about_3.jpg" class="image img-2" alt="" />
+              <img src="../assets/img/about_7.jpg" class="image img-3" alt="" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+                  <h2>Jaga Kesehatan Tubuh</h2>
+                  <h2>Edukasi Kesehatan</h2>
+                  <h2>Ayo Hidup Sehat</h2>
+                </div>
+              </div>
+
+              <div class="bullets">
+                <span class="active" data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/login.js"></script>
+  </body>
+</html>

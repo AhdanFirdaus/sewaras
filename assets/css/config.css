@@ -26,7 +26,6 @@ html {
 body {
   position: relative;
   min-height: 100vh;
-  /* padding-bottom: 500px; */
   background-color: var(--yellow-color);
   background-image: url("/assets/img/pattern.png"),
     linear-gradient(var(--yellow-color), var(--yellow-color));
@@ -40,7 +39,6 @@ body {
 h2 {
   font-family: var(--primary-font);
   font-size: 1.7rem;
-  color: #333;
   line-height: 1.4;
   color: var(--teal-color);
 }
