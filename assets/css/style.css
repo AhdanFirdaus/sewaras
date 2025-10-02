@@ -206,7 +206,6 @@
   color: #fff;
 }
 
-/* Blood Availbility section */
 #blood-avail {
   margin: 60px 0;
 }
@@ -214,18 +213,30 @@
 .carousel-container {
   overflow: hidden;
   margin-top: 20px;
+  width: 100%;
+  position: relative;
 }
 
 .carousel-track {
   display: flex;
   gap: 20px;
   transition: transform 0.3s ease;
+  width: max-content; /* Adjust to content width */
+  max-width: 100%; /* Prevent track from exceeding container */
+}
+
+.carousel-track p {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  padding: 20px;
+  width: 100%;
 }
 
 .card-blood {
+  flex: 0 0 calc(33.333% - 20px); /* Original card size */
   display: flex;
   align-items: center;
-  flex: 0 0 calc(33.333% - 20px);
   flex-wrap: wrap;
   gap: 10px;
   background: #fff;
@@ -291,15 +302,28 @@
   cursor: pointer;
   border-radius: 50%;
   border: 2px solid #333;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  transition: background-color 0.3s ease, transform 0.1s ease, opacity 0.3s ease;
 }
 
-.carousel-btn:hover {
+.carousel-btn:hover:not(:disabled) {
   background-color: var(--teal-dark-color);
 }
 
-.carousel-btn:active {
+.carousel-btn:active:not(:disabled) {
   transform: scale(0.95);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none; /* Prevent interaction with disabled buttons */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-blood {
+    flex: 0 0 calc(50% - 20px); /* Show 2 cards on smaller screens */
+  }
 }
 
 /* Regional health section*/

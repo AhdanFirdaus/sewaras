@@ -7,6 +7,7 @@ function loadSlides() {
       slidesData = data;
       renderSlides();
       showSlide(0);
+      updateNavButtons();
     })
     .fail(function () {
       $("#slides-container").html("<p>Gagal memuat data.</p>");
@@ -43,20 +44,65 @@ function renderSlides() {
 }
 
 function showSlide(index) {
-  $(".slide").removeClass("active").eq(index).addClass("active");
-  $("#lastUpdate").text("Terakhir diperbarui " + slidesData[index].update);
+  if (index >= 0 && index < slidesData.length) {
+    currentSlide = index;
+    $(".slide").removeClass("active").eq(index).addClass("active");
+    $("#lastUpdate").text("Terakhir diperbarui " + slidesData[index].update);
+    updateNavButtons();
+  }
+}
+
+function updateNavButtons() {
+  const prevButton = $(".carousel-btn[onclick='prevSlide()']");
+  const nextButton = $(".carousel-btn[onclick='nextSlide()']");
+
+  // Disable and style prev button if at the first slide
+  if (currentSlide === 0) {
+    prevButton
+      .prop("disabled", true)
+      .css({ opacity: "0.5", cursor: "not-allowed" })
+      .attr("aria-disabled", "true");
+  } else {
+    prevButton
+      .prop("disabled", false)
+      .css({ opacity: "1", cursor: "pointer" })
+      .attr("aria-disabled", "false");
+  }
+
+  // Disable and style next button if at the last slide
+  if (currentSlide === slidesData.length - 1) {
+    nextButton
+      .prop("disabled", true)
+      .css({ opacity: "0.5", cursor: "not-allowed" })
+      .attr("aria-disabled", "true");
+  } else {
+    nextButton
+      .prop("disabled", false)
+      .css({ opacity: "1", cursor: "pointer" })
+      .attr("aria-disabled", "false");
+  }
 }
 
 function nextSlide() {
-  currentSlide = (currentSlide + 1) % slidesData.length;
-  showSlide(currentSlide);
+  if (currentSlide < slidesData.length - 1) {
+    showSlide(currentSlide + 1);
+  }
 }
 
 function prevSlide() {
-  currentSlide = (currentSlide - 1 + slidesData.length) % slidesData.length;
-  showSlide(currentSlide);
+  if (currentSlide > 0) {
+    showSlide(currentSlide - 1);
+  }
 }
 
 $(document).ready(function () {
   loadSlides();
+
+  // Prevent clicks on disabled buttons
+  $(".carousel-btn").on("click", function (e) {
+    if ($(this).prop("disabled")) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  });
 });
