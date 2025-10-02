@@ -56,11 +56,10 @@ function updateNavButtons() {
   const prevButton = $(".carousel-btn[onclick='prevSlide()']");
   const nextButton = $(".carousel-btn[onclick='nextSlide()']");
 
-  // Disable and style prev button if at the first slide
   if (currentSlide === 0) {
     prevButton
       .prop("disabled", true)
-      .css({ opacity: "0.5", cursor: "not-allowed" })
+      .css({ opacity: "0.7", cursor: "not-allowed" })
       .attr("aria-disabled", "true");
   } else {
     prevButton
@@ -69,11 +68,10 @@ function updateNavButtons() {
       .attr("aria-disabled", "false");
   }
 
-  // Disable and style next button if at the last slide
   if (currentSlide === slidesData.length - 1) {
     nextButton
       .prop("disabled", true)
-      .css({ opacity: "0.5", cursor: "not-allowed" })
+      .css({ opacity: "0.7", cursor: "not-allowed" })
       .attr("aria-disabled", "true");
   } else {
     nextButton
@@ -98,7 +96,6 @@ function prevSlide() {
 $(document).ready(function () {
   loadSlides();
 
-  // Prevent clicks on disabled buttons
   $(".carousel-btn").on("click", function (e) {
     if ($(this).prop("disabled")) {
       e.preventDefault();
