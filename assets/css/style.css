@@ -221,8 +221,8 @@
   display: flex;
   gap: 20px;
   transition: transform 0.3s ease;
-  width: max-content; /* Adjust to content width */
-  max-width: 100%; /* Prevent track from exceeding container */
+  width: max-content;
+  max-width: 100%;
 }
 
 .carousel-track p {
@@ -234,7 +234,7 @@
 }
 
 .card-blood {
-  flex: 0 0 calc(33.333% - 20px); /* Original card size */
+  flex: 0 0 calc(33.333% - 20px);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -316,14 +316,7 @@
 .carousel-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  pointer-events: none; /* Prevent interaction with disabled buttons */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .card-blood {
-    flex: 0 0 calc(50% - 20px); /* Show 2 cards on smaller screens */
-  }
+  pointer-events: none;
 }
 
 /* Regional health section*/
@@ -451,5 +444,9 @@
 
   .text-content {
     padding: 0;
+  }
+
+  .card-blood {
+    flex: 0 0 calc(50% - 20px);
   }
 }
