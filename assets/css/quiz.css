@@ -144,7 +144,7 @@ main {
   padding: 30px;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   animation: zoomIn 0.4s ease forwards;
 }
 .result-card h2 {
@@ -190,7 +190,6 @@ main {
     transform: scale(0.8);
   }
 }
-
 
 /* Responsive */
 @media (max-width: 768px) {

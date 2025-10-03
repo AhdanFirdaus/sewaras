@@ -311,6 +311,7 @@ main.sign-up-mode .carousel {
   border-radius: 1rem;
 }
 
+/* Responsive */
 @media (max-width: 850px) {
   html {
     font-size: 16px;

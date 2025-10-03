@@ -104,7 +104,7 @@
 .carousel-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  pointer-events: none; /* Prevent any interaction */
+  pointer-events: none;
 }
 
 .last-update {
