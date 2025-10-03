@@ -19,10 +19,7 @@ $(document).ready(function () {
     $(".image").removeClass("show");
     $(`.img-${index}`).addClass("show");
 
-    $(".text-group").css(
-      "transform",
-      `translateY(${-(index - 1) * 2.2}rem)`
-    );
+    $(".text-group").css("transform", `translateY(${-(index - 1) * 2.2}rem)`);
 
     $(".bullets span").removeClass("active");
     $(this).addClass("active");

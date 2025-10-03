@@ -52,7 +52,7 @@ function renderQuestion() {
   $question.text(q.q);
   $options.empty();
 
-  q.opts.forEach(opt => {
+  q.opts.forEach((opt) => {
     $("<div>")
       .addClass("option")
       .text(opt)
@@ -65,9 +65,10 @@ function renderQuestion() {
   });
 
   $prev.prop("disabled", current === 0);
-  $next.html(current === questions.length - 1 
-    ? '<i class="bi bi-check2"></i>' 
-    : '<i class="bi bi-chevron-right"></i>'
+  $next.html(
+    current === questions.length - 1
+      ? '<i class="bi bi-check2"></i>'
+      : '<i class="bi bi-chevron-right"></i>'
   );
 }
 
@@ -85,7 +86,10 @@ function finishQuiz() {
     $quizCard.hide().removeClass("zoom-out");
     $result.show().addClass("zoom-in");
 
-    score = answers.reduce((acc, ans, i) => acc + (ans === questions[i].ans ? 1 : 0), 0);
+    score = answers.reduce(
+      (acc, ans, i) => acc + (ans === questions[i].ans ? 1 : 0),
+      0
+    );
     $scoreText.text(`Skor kamu: ${score} dari ${questions.length}`);
     $review.empty();
 
@@ -94,7 +98,11 @@ function finishQuiz() {
       if (answers[i] === q.ans) {
         $li.text(`✅ ${q.q} -> ${q.ans}`).addClass("correct");
       } else {
-        $li.text(`❌ ${q.q} -> Jawaban kamu: ${answers[i] || "-"}, benar: ${q.ans}`).addClass("wrong");
+        $li
+          .text(
+            `❌ ${q.q} -> Jawaban kamu: ${answers[i] || "-"}, benar: ${q.ans}`
+          )
+          .addClass("wrong");
       }
       $review.append($li);
     });
@@ -105,7 +113,10 @@ $next.on("click", () => {
   current < questions.length - 1 ? (current++, renderQuestion()) : finishQuiz();
 });
 $prev.on("click", () => {
-  if (current > 0) { current--; renderQuestion(); }
+  if (current > 0) {
+    current--;
+    renderQuestion();
+  }
 });
 
 $restart.on("click", () => {
@@ -135,9 +146,8 @@ $cancel.on("click", () => {
 });
 
 fetch("/assets/data/questions.json")
-  .then(res => res.json())
-  .then(data => {
+  .then((res) => res.json())
+  .then((data) => {
     questions = data;
     updateTimer();
-  })
-  .ca
+  }).ca;
